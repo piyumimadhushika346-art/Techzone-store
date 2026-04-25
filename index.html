@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GadgetHub Store</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg,#0a1f44,#0f3057,#1b3c73);
+  color:white;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:30px;
+  background: linear-gradient(90deg,#0072ff,#00c6ff);
+  animation:fadeDown 1s;
+}
+
+nav{
+  background:black;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:15px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+nav a:hover{color:#00c6ff;}
+
+section{
+  padding:40px;
+  animation:fadeUp 1s;
+}
+
+.title{
+  font-size:26px;
+  color:#00c6ff;
+  margin-bottom:20px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.06);
+  border-radius:15px;
+  padding:15px;
+  text-align:center;
+  position:relative;
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.05);
+  box-shadow:0 0 20px #00c6ff;
+}
+
+.card img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* BADGES */
+.badge{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:red;
+  padding:5px 10px;
+  font-size:12px;
+  border-radius:10px;
+}
+
+.new{
+  background:green;
+}
+
+.offer{
+  background:orange;
+}
+
+/* TEXT */
+.desc{font-size:13px;opacity:0.8;}
+.price{color:#00ffcc;font-weight:bold;}
+.avail{font-size:12px;color:#00ffcc;}
+
+/* BUTTON */
+.btn{
+  margin-top:10px;
+  padding:8px;
+  border:none;
+  background:#00c6ff;
+  color:white;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:15px;
+  background:black;
+}
+
+/* ANIMATION */
+@keyframes fadeDown{
+  from{opacity:0; transform:translateY(-40px);}
+  to{opacity:1;}
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>⚡ GadgetHub</h1>
+<p>Latest Gadgets with Best Offers</p>
+</header>
+
+<nav>
+<a href="#phones">Phones</a>
+<a href="#laptops">Laptops</a>
+<a href="#audio">Audio</a>
+<a href="#watch">Watches</a>
+<a href="#gaming">Gaming Accessories</a>
+</nav>
+
+<!-- PHONES -->
+<section id="phones">
+<h2 class="title">Smartphones</h2>
+<div class="grid">
+
+<div class="card">
+<span class="badge new">NEW</span>
+<img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?auto=format&fit=crop&w=500">
+<h3>Redmi Note 12</h3>
+<p class="desc">Powerful budget phone with long battery life.</p>
+<p class="price">Rs. 120,000</p>
+<p class="avail">Available in stock</p>
+<button class="btn">Buy</button>
+</div>
+
+<div class="card">
+<span class="badge offer">25% OFF</span>
+<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=500">
+<h3>Samsung S23</h3>
+<p class="desc">Premium Android phone with AMOLED display.</p>
+<p class="price">Rs. 280,000</p>
+<p class="avail">Limited stock</p>
+<button class="btn">Buy</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=500">
+<h3>Xiaomi 13</h3>
+<p class="desc">Modern smartphone with high performance.</p>
+<p class="price">Rs. 180,000</p>
+<p class="avail">Available</p>
+<button class="btn">Buy</button>
+</div>
+
+</div>
+</section>
+
+<!-- LAPTOPS -->
+<section id="laptops">
+<h2 class="title">Laptops</h2>
+<div class="grid">
+
+<div class="card">
+<span class="badge offer">SALE</span>
+<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500">
+<h3>MacBook Air</h3>
+<p class="desc">Lightweight laptop with powerful performance.</p>
+<p class="price">Rs. 450,000</p>
+<p class="avail">Available</p>
+<button class="btn">Buy</button>
+</div>
+
+<div class="card">
+<span class="badge new">NEW</span>
+<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500">
+<h3>Dell XPS</h3>
+<p class="desc">Premium design with fast speed.</p>
+<p class="price">Rs. 420,000</p>
+<p class="avail">In stock</p>
+<button class="btn">Buy</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500">
+<h3>HP Pavilion</h3>
+<p class="desc">Reliable laptop for everyday use.</p>
+<p class="price">Rs. 300,000</p>
+<p class="avail">Available</p>
+<button class="btn">Buy</button>
+</div>
+
+</div>
+</section>
+
+<!-- AUDIO -->
+<section id="audio">
+<h2 class="title">Audio Devices</h2>
+<div class="grid">
+
+<div class="card">
+<span class="badge new">NEW</span>
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500">
+<h3>AirPods</h3>
+<p class="desc">Wireless earbuds with clear sound.</p>
+<p class="price">Rs. 75,000</p>
+<p class="avail">Available</p>
+<button class="btn">Buy</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?auto=format&fit=crop&w=500">
+<h3>Sony Headphones</h3>
+<p class="desc">Noise cancelling headphones.</p>
+<p class="price">Rs. 65,000</p>
+<p class="avail">Limited stock</p>
+<button class="btn">Buy</button>
+</div>
+
+<div class="card">
+<span class="badge offer">HOT</span>
+<img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=500">
+<h3>JBL Speaker</h3>
+<p class="desc">Portable speaker with deep bass.</p>
+<p class="price">Rs. 55,000</p>
+<p class="avail">Available</p>
+<button class="btn">Buy</button>
+</div>
+
+</div>
+</section>
+
+<!-- WATCH -->
+<section id="watch">
+<h2 class="title">Smartwatches</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500">
+<h3>Apple Watch</h3>
+<p class="desc">Track fitness and health easily.</p>
+<p class="price">Rs. 150,000</p>
+<p class="avail">Available</p>
+<button class="btn">Buy</button>
+</div>
+
+<div class="card">
+<span class="badge new">NEW</span>
+<img src="https://images.unsplash.com/photo-1516822003754-cca485356ecb?auto=format&fit=crop&w=500">
+<h3>Galaxy Watch</h3>
+<p class="desc">Stylish smartwatch with features.</p>
+<p class="price">Rs. 130,000</p>
+<p class="avail">In stock</p>
+<button class="btn">Buy</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1579583764354-23b7d05a36c3?auto=format&fit=crop&w=500">
+<h3>Fitness Band</h3>
+<p class="desc">Track daily fitness activities easily.</p>
+<p class="price">Rs. 25,000</p>
+<p class="avail">Available</p>
+<button class="btn">Buy</button>
+</div>
+
+</div>
+</section>
+
+<!-- GAMING -->
+<section id="gaming">
+<h2 class="title">Gaming Accessories</h2>
+<div class="grid">
+
+<div class="card">
+<span class="badge offer">SALE</span>
+<img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=500">
+<h3>Gaming Mouse</h3>
+<p class="desc">High precision mouse for gaming.</p>
+<p class="price">Rs. 20,000</p>
+<p class="avail">Available</p>
+<button class="btn">Buy</button>
+</div>
+
+<div class="card">
+<span class="badge new">NEW</span>
+<img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=500">
+<h3>Gaming Keyboard</h3>
+<p class="desc">RGB mechanical keyboard for gamers.</p>
+<p class="price">Rs. 35,000</p>
+<p class="avail">In stock</p>
+<button class="btn">Buy</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=500">
+<h3>Gaming Headset</h3>
+<p class="desc">Immersive sound experience.</p>
+<p class="price">Rs. 28,000</p>
+<p class="avail">Available</p>
+<button class="btn">Buy</button>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 GadgetHub | Creative Final Assignment</p>
+</footer>
+
+</body>
+</html>
